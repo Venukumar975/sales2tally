@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SALES2TALLY - RETRO TERMINAL & CYBER THEME (SOLID PURE BLACK + NEON GREEN)
+   SALES2TALLY - RETRO TERMINAL & CYBER THEME (SOLID PURE BLACK + CRISP WHITE TEXT + NEON ACCENTS)
    ========================================================================== */
 
 :root {
@@ -14,8 +14,9 @@
     --neon-green-dark: #00240d;
 
     --text-primary: #ffffff;
-    --text-muted: #86efac;
-    --text-dim: rgba(0, 255, 102, 0.6);
+    --text-body: #e2e8f0;
+    --text-muted: #cbd5e1;
+    --text-dim: #94a3b8;
 
     --border-dim: rgba(0, 255, 102, 0.25);
     --border-bright: rgba(0, 255, 102, 0.7);
@@ -46,7 +47,7 @@ body {
     overflow-x: hidden;
 }
 
-/* CRT SCANLINE OVERLAY REMOVED FOR CRYSTAL CLEAR TEXT */
+/* CRT SCANLINE OVERLAY (DISABLED FOR ULTRA-CRISP READABILITY) */
 .crt-overlay {
     display: none;
 }
@@ -91,7 +92,7 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--text-primary);
+    color: #ffffff;
 }
 
 .highlight {
@@ -160,7 +161,7 @@ body {
 
 .terminal-status-bar {
     display: inline-block;
-    background: var(--neon-green-dark);
+    background: #091a0f;
     border: 1px solid var(--border-dim);
     color: var(--neon-green);
     font-size: 0.78rem;
@@ -208,7 +209,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.1rem;
-    color: #a7f3d0;
+    color: var(--text-body);
     max-width: 780px;
     margin: 0 auto 36px;
     line-height: 1.6;
@@ -254,13 +255,14 @@ body {
     display: block;
     font-size: 1rem;
     letter-spacing: 0.5px;
+    color: #000000;
 }
 
 .btn-text small {
     display: block;
     font-size: 0.75rem;
-    font-weight: 500;
-    opacity: 0.85;
+    font-weight: 600;
+    color: #111111;
 }
 
 .btn-neon-secondary {
@@ -324,7 +326,7 @@ body {
     left: 0;
     text-align: center;
     font-size: 0.78rem;
-    color: #6ee7b7;
+    color: #e2e8f0;
     pointer-events: none;
 }
 
@@ -336,7 +338,7 @@ body {
 
 .term-line {
     margin-bottom: 8px;
-    color: #d1fae5;
+    color: #f1f5f9;
     line-height: 1.5;
 }
 
@@ -351,7 +353,7 @@ body {
 }
 
 .term-line.output.success { color: var(--neon-green); }
-.term-line.output.info { color: #60a5fa; }
+.term-line.output.info { color: #38bdf8; }
 .term-line.output.highlight { color: #facc15; }
 
 .blink-cursor {
@@ -400,7 +402,7 @@ body {
 }
 
 .section-desc {
-    color: #a7f3d0;
+    color: var(--text-muted);
     font-size: 1rem;
     max-width: 650px;
     margin: 0 auto 50px;
@@ -437,13 +439,13 @@ body {
 .card-title {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--neon-green);
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .card-text {
     font-size: 0.9rem;
-    color: #d1fae5;
+    color: var(--text-body);
     line-height: 1.6;
 }
 
@@ -484,12 +486,12 @@ body {
     font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 8px;
-    color: var(--text-primary);
+    color: #ffffff;
 }
 
 .step-content p {
     font-size: 0.88rem;
-    color: #a7f3d0;
+    color: var(--text-body);
     line-height: 1.5;
 }
 
@@ -539,7 +541,7 @@ body {
 }
 
 .spec-val {
-    color: #ecfdf5;
+    color: #f8fafc;
     background: #000000;
 }
 
@@ -570,7 +572,7 @@ body {
     padding: 18px 22px;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--text-primary);
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -592,7 +594,7 @@ body {
 .faq-answer {
     padding: 0 22px 18px;
     font-size: 0.88rem;
-    color: #a7f3d0;
+    color: var(--text-body);
     line-height: 1.6;
     display: none;
     background: #000000;
@@ -619,18 +621,19 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 8px;
+    color: #ffffff;
 }
 
 .footer-tagline {
     font-size: 0.85rem;
-    color: #6ee7b7;
+    color: var(--text-muted);
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
 .footer-disclaimer {
     font-size: 0.78rem;
-    color: rgba(110, 231, 183, 0.7);
+    color: var(--text-dim);
     max-width: 800px;
     margin: 15px auto 20px;
     line-height: 1.6;
@@ -640,7 +643,7 @@ body {
 
 .footer-copy {
     font-size: 0.75rem;
-    color: #047857;
+    color: #64748b;
 }
 
 /* RESPONSIVE BREAKPOINTS */
