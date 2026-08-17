@@ -46,20 +46,9 @@ body {
     overflow-x: hidden;
 }
 
-/* CRT SCANLINE OVERLAY (PURE BLACK TINTED) */
+/* CRT SCANLINE OVERLAY REMOVED FOR CRYSTAL CLEAR TEXT */
 .crt-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0) 50%, 
-        rgba(0, 0, 0, 0.4) 50%
-    );
-    background-size: 100% 4px;
-    pointer-events: none;
-    z-index: 9999;
+    display: none;
 }
 
 /* NAVIGATION */
@@ -89,10 +78,13 @@ body {
 }
 
 .brand-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px var(--neon-green-glow);
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 20px var(--neon-green-glow);
+    background: #000;
+    object-fit: contain;
 }
 
 .brand-text {
@@ -195,6 +187,18 @@ body {
     margin-bottom: 20px;
     letter-spacing: -0.5px;
     color: #ffffff;
+}
+
+.neon-green-highlight {
+    color: var(--neon-green);
+    text-shadow: 0 0 15px rgba(0, 255, 102, 0.7), 0 0 30px rgba(0, 255, 102, 0.35);
+    display: inline-block;
+}
+
+.neon-blue-highlight {
+    color: #00d2ff;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.7), 0 0 30px rgba(0, 210, 255, 0.35);
+    display: inline-block;
 }
 
 .neon-text {
@@ -622,6 +626,16 @@ body {
     color: #6ee7b7;
     margin-bottom: 20px;
     letter-spacing: 1px;
+}
+
+.footer-disclaimer {
+    font-size: 0.78rem;
+    color: rgba(110, 231, 183, 0.7);
+    max-width: 800px;
+    margin: 15px auto 20px;
+    line-height: 1.6;
+    border-top: 1px solid rgba(0, 255, 102, 0.15);
+    padding-top: 18px;
 }
 
 .footer-copy {
