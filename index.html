@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALES2TALLY // Excel to Tally Prime XML Automation Suite</title>
+    <meta name="description" content="Convert raw Excel Sales & Purchase Registers to native Tally Prime XML in seconds. Automated fuzzy ledger matching, stock item sync, and 100% offline security.">
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CRT SCANLINE OVERLAY -->
+    <div class="crt-overlay"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="retro-nav">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="assets/app_icon.png" alt="SALES2TALLY Logo" class="brand-icon">
+                <span class="brand-text">SALES<span class="highlight">2</span>TALLY</span>
+                <span class="version-badge">v1.0.0</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">[ FEATURES ]</a>
+                <a href="#pipeline" class="nav-link">[ HOW_IT_WORKS ]</a>
+                <a href="#compatibility" class="nav-link">[ SPECS ]</a>
+                <a href="#faq" class="nav-link">[ FAQ ]</a>
+                <a href="/api/download" class="btn-retro-nav" id="nav-download-btn">[ DOWNLOAD .EXE ]</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-container">
+            <div class="terminal-status-bar">
+                <span class="status-indicator">●</span> SYSTEM ONLINE &nbsp;|&nbsp; ARCH: WIN64 &nbsp;|&nbsp; TALLY COMPAT: PRIME 1.0 - 5.0+ &nbsp;|&nbsp; 100% OFFLINE
+            </div>
+
+            <h1 class="hero-title">
+                CONVERT EXCEL REGISTERS TO <br>
+                <span class="neon-text">TALLY PRIME XML</span> IN SECONDS.
+            </h1>
+
+            <p class="hero-subtitle">
+                Zero manual data entry. Automatic Fuzzy Party Ledger Matching, Stock Item &amp; UOM Sync, Multi-Rate GST Tax Breakdown, and 1-Click Tally Prime XML Import.
+            </p>
+
+            <div class="cta-group">
+                <a href="/api/download" class="btn-neon-primary" id="main-download-btn">
+                    <span class="btn-icon">⬇</span>
+                    <span class="btn-text">
+                        <strong>DOWNLOAD FOR WINDOWS</strong>
+                        <small>SALES2TALLY_Setup_v1.0.exe &bull; 64-bit</small>
+                    </span>
+                </a>
+                <a href="#pipeline" class="btn-neon-secondary">
+                    <span class="btn-text">[ VIEW PIPELINE DEMO ]</span>
+                </a>
+            </div>
+
+            <!-- TERMINAL SIMULATOR -->
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <div class="window-controls">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">SALES2TALLY.exe // EXECUTION_MONITOR</div>
+                </div>
+                <div class="terminal-body" id="terminal-screen">
+                    <p class="term-line"><span class="prompt">></span> <span class="cmd">sales2tally --inspect "Sales_Register_July.xlsx"</span></p>
+                    <p class="term-line output success">✔ Loaded 4,820 rows from sheet 'Sales_Data' in 0.28s</p>
+                    <p class="term-line output info">ℹ Connected to local Tally Prime (Company: "DEMO ENTERPRISES LTD")</p>
+                    <p class="term-line output info">ℹ Running Fuzzy Party Ledger Matching on 642 unique party names...</p>
+                    <p class="term-line output success">✔ 590 Perfect matches found &bull; 42 Fuzzy matches linked &bull; 10 New ledgers prepared</p>
+                    <p class="term-line output info">ℹ Parsing Multi-Tax Rates: CGST 9% (₹4,20,500), SGST 9% (₹4,20,500), IGST 18% (₹1,85,200)</p>
+                    <p class="term-line output highlight">⚡ Generating Native Tally XML Envelope: Vouchers_July_2026.xml</p>
+                    <p class="term-line output success">✨ 4,820 Vouchers compiled into standard Tally XML format (Size: 3.4 MB)</p>
+                    <p class="term-line"><span class="prompt">></span> <span class="blink-cursor">_</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- KEY FEATURES MATRIX -->
+    <section id="features" class="section">
+        <div class="section-container">
+            <div class="section-badge">[ SYSTEM CAPABILITIES ]</div>
+            <h2 class="section-title">ENGINEERED FOR SPEED, ACCURACY &amp; PRIVACY</h2>
+            <p class="section-desc">Designed specifically for Indian Chartered Accountants, Tax Consultants, and Accounting Teams.</p>
+
+            <div class="grid-3">
+                <div class="retro-card">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">Batch XML Generator</h3>
+                    <p class="card-text">
+                        Converts thousands of complex sales and purchase invoices from any custom Excel format into Tally Prime importable XML in seconds.
+                    </p>
+                </div>
+
+                <div class="retro-card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Fuzzy Ledger Matching</h3>
+                    <p class="card-text">
+                        Intelligently links messy party names in Excel to existing Tally ledgers using weighted fuzzy token similarity and automated spell-correction.
+                    </p>
+                </div>
+
+                <div class="retro-card">
+                    <div class="card-icon">📦</div>
+                    <h3 class="card-title">Stock Item &amp; UOM Sync</h3>
+                    <p class="card-text">
+                        Auto-detects product names, quantities, rates, and units of measure (PCS, KGS, NOS, BOX). Auto-creates missing stock items directly in Tally.
+                    </p>
+                </div>
+
+                <div class="retro-card">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">Multi-Rate GST Engine</h3>
+                    <p class="card-text">
+                        Handles mixed tax brackets (5%, 12%, 18%, 28%) and split CGST / SGST / IGST ledgers with automatic fractional round-off reconciliation.
+                    </p>
+                </div>
+
+                <div class="retro-card">
+                    <div class="card-icon">🔒</div>
+                    <h3 class="card-title">100% Offline &amp; Air-Gapped</h3>
+                    <p class="card-text">
+                        Runs completely locally on your desktop. No cloud uploads, no external data sharing, no API leaks. Complete financial privacy.
+                    </p>
+                </div>
+
+                <div class="retro-card">
+                    <div class="card-icon">🖥️</div>
+                    <h3 class="card-title">Native Desktop GUI</h3>
+                    <p class="card-text">
+                        Clean modern dark desktop window powered by hardware-accelerated WebView2. Built-in Windows Save As dialog and background auto-cleanup.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS PIPELINE -->
+    <section id="pipeline" class="section dark-bg">
+        <div class="section-container">
+            <div class="section-badge">[ WORKFLOW PIPELINE ]</div>
+            <h2 class="section-title">3 SIMPLE STEPS TO TALLY AUTOMATION</h2>
+
+            <div class="pipeline-grid">
+                <div class="pipeline-step">
+                    <div class="step-num">01</div>
+                    <div class="step-content">
+                        <h3>Drop Excel Register</h3>
+                        <p>Upload your raw Sales or Purchase register (.xlsx/.xls). The app automatically scans sheet headers and suggests mappings.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-divider">➜</div>
+
+                <div class="pipeline-step">
+                    <div class="step-num">02</div>
+                    <div class="step-content">
+                        <h3>Sync &amp; Verify Ledgers</h3>
+                        <p>One-click sync with your active Tally Prime company. Verify party ledgers, stock items, and tax brackets in real-time.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-divider">➜</div>
+
+                <div class="pipeline-step">
+                    <div class="step-num">03</div>
+                    <div class="step-content">
+                        <h3>Export &amp; Import XML</h3>
+                        <p>Click Generate XML to download the formatted XML file, open Tally Prime &gt; <strong>Import &gt; Transactions</strong>, and done!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPATIBILITY & SPECS -->
+    <section id="compatibility" class="section">
+        <div class="section-container">
+            <div class="section-badge">[ SYSTEM SPECIFICATIONS ]</div>
+            <h2 class="section-title">COMPATIBILITY &amp; REQUIREMENTS</h2>
+
+            <div class="specs-box">
+                <table class="retro-table">
+                    <tbody>
+                        <tr>
+                            <td class="spec-label">Operating System</td>
+                            <td class="spec-val">Windows 10 / Windows 11 (64-bit)</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">Tally Compatibility</td>
+                            <td class="spec-val">Tally Prime (1.0, 2.0, 3.0, 4.0, 5.0+), Tally.ERP 9 Release 6.x</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">Input Formats</td>
+                            <td class="spec-val">Excel (.xlsx, .xls), CSV, Custom Accounting exports</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">Output Formats</td>
+                            <td class="spec-val">Tally XML Envelope (Daybook / Sales / Purchase), Normalized Excel</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">Network Requirement</td>
+                            <td class="spec-val">None (100% Offline Local Engine)</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">Licensing</td>
+                            <td class="spec-val">Machine-Locked Hardware ID (.lic) &bull; Lifetime &amp; Demo Support</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section dark-bg">
+        <div class="section-container">
+            <div class="section-badge">[ KNOWLEDGE BASE ]</div>
+            <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I install SALES2TALLY on my computer?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply download <code>SALES2TALLY_Setup_v1.0.exe</code>, run the installer, and follow the standard on-screen setup steps. A desktop icon named <strong>SALES2TALLY</strong> will be created automatically.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does SALES2TALLY send my financial data to any server?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. SALES2TALLY runs 100% locally on your machine. All calculations, parsing, and XML generation happen completely offline in your local environment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I import the generated XML into Tally Prime?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>In Tally Prime, navigate to <strong>Alt+O (Import) &gt; Transactions &gt; XML Format</strong>, select the generated XML file, and press Enter. All invoices and vouchers will be imported seamlessly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can it handle items with different GST tax rates on the same invoice?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. The multi-tax parsing engine groups ledger entries by GST rate and generates proper CGST, SGST, and IGST breakdowns for multi-item and multi-rate vouchers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="retro-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="highlight">SALES2TALLY</span> // DESKTOP AUTOMATION ENGINE
+            </div>
+            <div class="footer-tagline">
+                BUILT FOR FAST, BULLETPROOF ACCOUNTING WORKFLOWS.
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year">2026</span> SALES2TALLY. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
